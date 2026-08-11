@@ -20,14 +20,14 @@ precisa_repor
 
 # correção
 
-produto <-  c("Notebook", "Smartphone", "Tablet", "Fone de ouvido", "Carregador")
+produto <- c("Notebook", "Smartphone", "Tablet", "Fone de ouvido", "Carregador")
 qtd <- c(12, 16, 28, 8, 10)
 
 estoque <- data.frame(produto, qtd)
 estoque
 
-sum(estoque[ , 2])
-reposicao <- estoque[ , 2] < 15
-reposicao()
+sum(estoque[, 2])
 
-#colocar só os verdadeiros no dataframe
+reposicao <- estoque[, 2] < 15
+
+estoque[reposicao, ]
